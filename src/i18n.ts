@@ -1,17 +1,24 @@
 import clueEN from '@cccsaurora/clue-ui/en/translation.json';
 import clueFR from '@cccsaurora/clue-ui/fr/translation.json';
+import clueUK from 'locales/uk/clue/translation.json';
 import developmentAPIEN from 'components/routes/development/api/development_api.i18n.en.json';
 import developmentAPIFR from 'components/routes/development/api/development_api.i18n.fr.json';
+import developmentAPIUK from 'locales/uk/components/development_api.i18n.uk.json';
 import settingsEN from 'components/routes/settings/settings.i18n.en.json';
 import settingsFR from 'components/routes/settings/settings.i18n.fr.json';
+import settingsUK from 'locales/uk/components/settings.i18n.uk.json';
 import submitEN from 'components/routes/submit/submit.i18n.en.json';
 import submitFR from 'components/routes/submit/submit.i18n.fr.json';
+import submitUK from 'locales/uk/components/submit.i18n.uk.json';
 import dateTimeEN from 'components/visual/DateTime/datetime.i18n.en.json';
 import dateTimeFR from 'components/visual/DateTime/datetime.i18n.fr.json';
+import dateTimeUK from 'locales/uk/components/datetime.i18n.uk.json';
 import inputsEN from 'components/visual/Inputs/i18n/inputs.i18n.en.json';
 import inputsFR from 'components/visual/Inputs/i18n/inputs.i18n.fr.json';
+import inputsUK from 'locales/uk/components/inputs.i18n.uk.json';
 import sandboxResultEN from 'components/visual/ResultCard/Sandbox/sandbox.i18n.en.json';
 import sandboxResultFR from 'components/visual/ResultCard/Sandbox/sandbox.i18n.fr.json';
+import sandboxResultUK from 'locales/uk/components/sandbox.i18n.uk.json';
 import { default as i18n } from 'i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import error403EN from 'locales/en/403.json';
@@ -122,6 +129,60 @@ import submissionsFR from 'locales/fr/submissions.json';
 import tosFR from 'locales/fr/tos.json';
 import translationFR from 'locales/fr/translation.json';
 import userFR from 'locales/fr/user.json';
+import error403UK from 'locales/uk/403.json';
+import error404UK from 'locales/uk/404.json';
+import adminActionsUK from 'locales/uk/admin/actions.json';
+import adminAPIkeysUK from 'locales/uk/admin/apikeys.json';
+import adminCommunityServicesUK from 'locales/uk/admin/community_services.json';
+import adminErrorViewerUK from 'locales/uk/admin/error_viewer.json';
+import adminIdentifyUK from 'locales/uk/admin/identify.json';
+import adminServiceReviewUK from 'locales/uk/admin/service_review.json';
+import adminServicesUK from 'locales/uk/admin/services.json';
+import adminSiteMapUK from 'locales/uk/admin/site_map.json';
+import adminTagSafelistUK from 'locales/uk/admin/tag_safelist.json';
+import adminUsersUK from 'locales/uk/admin/users.json';
+import alertsUK from 'locales/uk/alerts.json';
+import archiveUK from 'locales/uk/archive.json';
+import assistantUK from 'locales/uk/assistant.json';
+import authorizeUK from 'locales/uk/authorize.json';
+import carouselUK from 'locales/uk/carousel.json';
+import dashboardUK from 'locales/uk/dashboard.json';
+import favoritesUK from 'locales/uk/favorites.json';
+import fileDetailUK from 'locales/uk/file/detail.json';
+import hexViewerUK from 'locales/uk/file/hex.json';
+import fileViewerUK from 'locales/uk/file/viewer.json';
+import helpAPIUK from 'locales/uk/help/api.json';
+import helpClassificationUK from 'locales/uk/help/classification.json';
+import helpConfigurationUK from 'locales/uk/help/configuration.json';
+import helpSearchUK from 'locales/uk/help/search.json';
+import helpServicesUK from 'locales/uk/help/services.json';
+import lockedUK from 'locales/uk/locked.json';
+import loginUK from 'locales/uk/login.json';
+import logoutUK from 'locales/uk/logout.json';
+import manageBadlistUK from 'locales/uk/manage/badlist.json';
+import manageBadlistAddUK from 'locales/uk/manage/badlist_add.json';
+import manageBadlistDetailUK from 'locales/uk/manage/badlist_detail.json';
+import manageHeuristicDetailUK from 'locales/uk/manage/heuristic_detail.json';
+import manageHeuristicsUK from 'locales/uk/manage/heuristics.json';
+import manageSafelistUK from 'locales/uk/manage/safelist.json';
+import manageSafelistAddUK from 'locales/uk/manage/safelist_add.json';
+import manageSafelistDetailUK from 'locales/uk/manage/safelist_detail.json';
+import manageSignatureDetailUK from 'locales/uk/manage/signature_detail.json';
+import manageSignatureSourcesUK from 'locales/uk/manage/signature_sources.json';
+import manageSignaturesUK from 'locales/uk/manage/signatures.json';
+import manageWorkflowDetailUK from 'locales/uk/manage/workflow_detail.json';
+import manageWorkflowsUK from 'locales/uk/manage/workflows.json';
+import notificationUK from 'locales/uk/notification.json';
+import retrohuntUK from 'locales/uk/retrohunt.json';
+import searchUK from 'locales/uk/search.json';
+import statisticsHeuristicsUK from 'locales/uk/statistics/heuristics.json';
+import statisticsSignaturesUK from 'locales/uk/statistics/signatures.json';
+import submissionDetailUK from 'locales/uk/submission/detail.json';
+import submissionReportUK from 'locales/uk/submission/report.json';
+import submissionsUK from 'locales/uk/submissions.json';
+import tosUK from 'locales/uk/tos.json';
+import translationUK from 'locales/uk/translation.json';
+import userUK from 'locales/uk/user.json';
 import { initReactI18next } from 'react-i18next';
 
 const resources = {
@@ -250,6 +311,69 @@ const resources = {
     tos: tosFR,
     translation: translationFR,
     user: userFR
+  },
+  uk: {
+    adminActions: adminActionsUK,
+    adminAPIkeys: adminAPIkeysUK,
+    adminCommunityServices: adminCommunityServicesUK,
+    adminErrorViewer: adminErrorViewerUK,
+    adminIdentify: adminIdentifyUK,
+    adminServiceReview: adminServiceReviewUK,
+    adminServices: adminServicesUK,
+    adminSiteMap: adminSiteMapUK,
+    adminTagSafelist: adminTagSafelistUK,
+    adminUsers: adminUsersUK,
+    alerts: alertsUK,
+    archive: archiveUK,
+    assistant: assistantUK,
+    authorize: authorizeUK,
+    carousel: carouselUK,
+    clue: clueUK,
+    dashboard: dashboardUK,
+    dateTime: dateTimeUK,
+    developmentAPI: developmentAPIUK,
+    error403: error403UK,
+    error404: error404UK,
+    favorites: favoritesUK,
+    fileDetail: fileDetailUK,
+    fileViewer: fileViewerUK,
+    helpAPI: helpAPIUK,
+    helpClassification: helpClassificationUK,
+    helpConfiguration: helpConfigurationUK,
+    helpSearch: helpSearchUK,
+    helpServices: helpServicesUK,
+    hexViewer: hexViewerUK,
+    inputs: inputsUK,
+    locked: lockedUK,
+    login: loginUK,
+    logout: logoutUK,
+    manageBadlist: manageBadlistUK,
+    manageBadlistAdd: manageBadlistAddUK,
+    manageBadlistDetail: manageBadlistDetailUK,
+    manageHeuristicDetail: manageHeuristicDetailUK,
+    manageHeuristics: manageHeuristicsUK,
+    manageSafelist: manageSafelistUK,
+    manageSafelistAdd: manageSafelistAddUK,
+    manageSafelistDetail: manageSafelistDetailUK,
+    manageSignatureDetail: manageSignatureDetailUK,
+    manageSignatures: manageSignaturesUK,
+    manageSignatureSources: manageSignatureSourcesUK,
+    manageWorkflowDetail: manageWorkflowDetailUK,
+    manageWorkflows: manageWorkflowsUK,
+    notification: notificationUK,
+    retrohunt: retrohuntUK,
+    sandboxResult: sandboxResultUK,
+    search: searchUK,
+    settings: settingsUK,
+    statisticsHeuristics: statisticsHeuristicsUK,
+    statisticsSignatures: statisticsSignaturesUK,
+    submissionDetail: submissionDetailUK,
+    submissionReport: submissionReportUK,
+    submissions: submissionsUK,
+    submit: submitUK,
+    tos: tosUK,
+    translation: translationUK,
+    user: userUK
   }
 };
 

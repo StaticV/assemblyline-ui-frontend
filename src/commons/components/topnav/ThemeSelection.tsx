@@ -27,11 +27,10 @@ import { AppThemesContext } from 'commons/components/app/providers/AppThemesProv
 import useSafeResults from 'components/hooks/useSafeResults';
 import { memo, useContext } from 'react';
 import { useTranslation } from 'react-i18next';
-import i18n, { SUPPORTED_LANGUAGES } from '../../../i18n';
 
 const ThemeSelection = () => {
   const theme = useTheme();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const configs = useAppConfigs();
   const layout = useAppLayout();
   const breadcrumbs = useAppBreadcrumbs();
@@ -65,12 +64,9 @@ const ThemeSelection = () => {
                 }}
                 id="language-select"
               >
-                {/* Dynamically generated from your i18n file definitions */}
-                {Object.entries(SUPPORTED_LANGUAGES).map(([code, label]) => (
-                  <MenuItem key={code} value={code}>
-                    {label}
-                  </MenuItem>
-                ))}
+                <MenuItem value="en">English</MenuItem>
+                <MenuItem value="fr">Français</MenuItem>
+                <MenuItem value="uk">Українська</MenuItem>
               </Select>
             }
           >

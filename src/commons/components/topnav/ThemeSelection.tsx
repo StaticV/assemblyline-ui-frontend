@@ -8,7 +8,6 @@ import {
   MenuItem,
   Select,
   Switch,
-  Typography,
   useMediaQuery,
   useTheme
 } from '@mui/material';
@@ -31,7 +30,7 @@ import { useTranslation } from 'react-i18next';
 
 const ThemeSelection = () => {
   const theme = useTheme();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const configs = useAppConfigs();
   const layout = useAppLayout();
   const breadcrumbs = useAppBreadcrumbs();
@@ -54,30 +53,25 @@ const ThemeSelection = () => {
     <div>
       {configs.preferences.allowTranslate && (
         <List dense subheader={<ListSubheader disableSticky>{t('app.language')}</ListSubheader>}>
-          <ListItemButton dense onClick={language.toggle} id="language">
-            <ListItemText style={{ margin: 0 }}>
-              <div
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  flexDirection: 'row',
-                  width: '100%',
-                  textAlign: 'center',
-                  cursor: 'pointer'
+          <ListItem
+            sx={{ justifyContent: 'space-between' }}
+            secondaryAction={
+              <Select
+                size="small"
+                value={i18n.language || 'en'}
+                onChange={e => {
+                  i18n.changeLanguage(e.target.value);
                 }}
+                id="language-select"
               >
-                <Typography component="div" variant="body2">
-                  English
-                </Typography>
-                <div style={{ flexGrow: 1 }}>
-                  <Switch checked={language.isFR()} name="langSwitch" />
-                </div>
-                <Typography component="div" variant="body2">
-                  Français
-                </Typography>
-              </div>
-            </ListItemText>
-          </ListItemButton>
+                <MenuItem value="en">English</MenuItem>
+                <MenuItem value="fr">Français</MenuItem>
+                <MenuItem value="uk">Українська</MenuItem>
+              </Select>
+            }
+          >
+            <ListItemText primary={t('app.language')} />
+          </ListItem>
         </List>
       )}
       {configs.preferences.allowTranslate && configs.allowPersonalization && <Divider />}

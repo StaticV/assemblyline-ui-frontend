@@ -185,11 +185,12 @@ import translationUK from 'locales/uk/translation.json';
 import userUK from 'locales/uk/user.json';
 import { initReactI18next } from 'react-i18next';
 
-export const SUPPORTED_LANGUAGES: Record<string, string> = {
-  en: 'English',
-  fr: 'Français',
-  uk: 'Українська'
-};
+export const SUPPORTED_LANGUAGES = [
+  { code: 'en', label: 'English' },
+  { code: 'fr', label: 'Français' },
+  { code: 'uk', label: 'Українська' }
+];
+
 
 const resources = {
   en: {

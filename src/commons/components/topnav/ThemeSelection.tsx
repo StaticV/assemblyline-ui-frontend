@@ -65,8 +65,7 @@ const ThemeSelection = () => {
                 }}
                 id="language-select"
               >
-                {/* Dynamically generated from your i18n file definitions */}
-                {Object.entries(SUPPORTED_LANGUAGES).map(([code, label]) => (
+                {SUPPORTED_LANGUAGES.map(({ code, label }) => (
                   <MenuItem key={code} value={code}>
                     {label}
                   </MenuItem>

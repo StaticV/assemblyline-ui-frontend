@@ -77,7 +77,7 @@
     "profile.option.custom.summary":  "Вказані параметри не відповідають жодному з профілів подання, які керуються системою.",
     "raw.input.label":  "Будь ласка, надайте текст, який потрібно перекласти.",
     "raw.input.placeholder":  "Вставте необроблені дані тут, щоб їх можна було проаналізувати.",
-    "raw.input.tooltip":  "Okay, please paste the English text you want me to translate into Ukrainian. I will provide the translation without any additional commentary.",
+    "raw.input.tooltip":  "Вставте необроблений текст для аналізу.",
     "submit.button.editing.label":  "Надіслати.",
     "submit.button.loading.label":  "Завантаження...",
     "submit.button.redirecting.label":  "Перенаправлення...",

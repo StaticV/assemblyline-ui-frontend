@@ -25,7 +25,7 @@
     "options.service_spec":  "Параметри послуг (специфічні параметри).",
     "options.submission":  "Параметри подання матеріалів.",
     "options.submission.deep_scan":  "Проведіть глибокий аналіз.",
-    "options.submission.default_external_sources":  "Okay, please provide the English text you would like me to translate. I will do my best to provide an accurate and natural-sounding Ukrainian translation.",
+    "options.submission.default_external_sources":  "Також перегляньте такі зовнішні джерела:",
     "options.submission.desc":  "Опис.",
     "options.submission.generate_alert":  "Створити сповіщення.",
     "options.submission.ignore_cache":  "Ігнорувати кешовані результати.",
